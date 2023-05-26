@@ -11,7 +11,7 @@ export default function CodeBox({ selected, language, title, codeString }) {
         setCode(e.target.value);
     }
     useEffect(() =>{
-        var lines = codeString.split("\n");
+        var lines = code.split("\n");
         lines.sort(function (a, b) {
             return b.length - a.length;
         });
@@ -45,7 +45,7 @@ export default function CodeBox({ selected, language, title, codeString }) {
             <div className='content'>
                 <textarea spellCheck="false" onChange={handleChange} style={{ width: `${width}ch`, overflow: 'hidden' }} rows={height}></textarea>
                 <SyntaxHighlighter language={language} style={Styles[selected]}>
-                    {codeString}
+                    {code}
                 </SyntaxHighlighter>
             </div>
         </div>
