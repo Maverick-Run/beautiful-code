@@ -1,10 +1,13 @@
 .settings{
     border:1px solid rgba(211, 211, 211, 0.151);
-    width:auto;
+    max-width:100%;
     border-radius: 5px;
     padding:1%;
     display: flex;
     justify-content: space-around;
+    
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+    background-color: rgba(255, 255, 255, 0.027); /* Set the background color for the options */
 }
 /* Custom styles for the select component */
 .custom-select {
@@ -42,6 +45,7 @@
   max-height: 300px; /* Adjust the height as needed */
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 10;
   }
   /* Custom styles for the scrollbar */
 .options-list::-webkit-scrollbar {

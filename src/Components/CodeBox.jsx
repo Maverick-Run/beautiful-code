@@ -43,7 +43,7 @@ export default function CodeBox({ selected, language, title, codeString }) {
                 </div>
             </div>
             <div className='content'>
-                <textarea spellCheck="false" onChange={handleChange} style={{ width: `${width}ch`, overflow: 'hidden' }} rows={height}></textarea>
+                <textarea spellCheck="false" onChange={handleChange} style={{ width: `${width}ch`, overflow: 'hidden', zIndex:'5' }} rows={height}></textarea>
                 <SyntaxHighlighter language={language} style={Styles[selected]}>
                     {code}
                 </SyntaxHighlighter>
