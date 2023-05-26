@@ -1,4 +1,5 @@
 import React, { useState, useEffect,useRef  } from 'react'
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import CodeBox from './Components/CodeBox';
 import Settings from './Components/Settings';
@@ -31,6 +32,7 @@ function App() {
   };
   return (
     <>
+    <Analytics />
       <div className="app">
         <div ref={imageRef}>
           <CodeBox selected={selected} title={title} codeString={codeString} language={language}/>
