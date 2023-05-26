@@ -38,8 +38,10 @@ function App() {
     <>
     <Analytics />
       <div className="app">
-        <div ref={imageRef} className='centeredBox code'>
-          <CodeBox selected={selected} title={title} codeString={codeString} language={language}/>
+        <div className='centeredBox code'>
+          <div className='centeredBox'  ref={imageRef}>
+            <CodeBox selected={selected} title={title} codeString={codeString} language={language}/>
+          </div>
         </div>
         <div className='centeredBox sett'>
           <Settings setLanguage={setLanguage} language={language} setSelected={setSelected} selected={selected} handleCapture={handleCapture}/>
