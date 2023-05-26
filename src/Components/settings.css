@@ -1,0 +1,99 @@
+.settings{
+    border:1px solid rgba(211, 211, 211, 0.151);
+    width:auto;
+    border-radius: 5px;
+    padding:1%;
+    display: flex;
+    justify-content: space-around;
+}
+/* Custom styles for the select component */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width:250px;
+    padding:2% 1%  2% 1%;
+  }
+  
+  .select-button {
+    background-color: transparent;
+    border: 1px solid #cccccc23;
+    color: rgba(255, 255, 255, 0.397);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Inter,sans-serif;
+  }
+  
+  .options-list {
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    width:250px;
+    margin: 0;
+    margin-bottom: -2px;
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+    background-color: rgba(255, 255, 255, 0.027); /* Set the background color for the options */
+    border: 1px solid #cccccc17;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    display: none;
+    bottom: 100%;
+      /* Add a fixed height and enable overflow scrolling */
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  overflow-x: hidden;
+  }
+  /* Custom styles for the scrollbar */
+.options-list::-webkit-scrollbar {
+    width: 8px;
+  }
+.capture{
+  background-color: transparent;
+  border:1px solid #cccccc23;
+  color: rgba(255, 255, 255, 0.397);
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-Right: 20px;
+  margin: 2% 1% 2% 1%;
+}
+.inputlabel{
+  color: rgba(255, 255, 255, 0.397);
+  font-family: Inter,sans-serif;
+  font-size: 0.8rem;
+  margin-top: -15px;
+  position: absolute;
+}
+.capture:hover{
+  background-color: #8888881f;
+}
+  .options-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .options-list::-webkit-scrollbar-track {
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+    background-color: rgba(255, 255, 255, 0.027); /* Set the background color for the options */
+  }
+  
+  .option {
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid #cccccc17;
+    font-family: Inter,sans-serif;
+    color: rgba(255, 255, 255, 0.397);
+  }
+  .option:hover{
+    background-color: rgba(255, 255, 255, 0.11); /* Set the background color for the options */
+  }
+  
+  /* Custom styles for the button when hovering over the select component */
+  .select-button:hover {
+    background-color: rgba(136, 136, 136, 0.11);
+    color: white;
+  }
+  
+  /* Custom styles for the menu that appears when clicking the select component */
+  .options-list.visible {
+    display: block;
+  }
