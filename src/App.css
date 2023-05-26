@@ -131,6 +131,7 @@ textarea{
     resize: none;
     position: absolute;
     overflow: hidden;    
+    z-index: 0;
 }
 textarea:focus, input:focus{
     outline: none;
@@ -148,7 +149,6 @@ textarea:focus, input:focus{
     border-radius: 50%;
     display: inline-block;
     transition-duration: 500ms;
-    z-index: 10;
 }
 .close{
     background-color: #630000;
