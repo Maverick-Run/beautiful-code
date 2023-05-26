@@ -10,7 +10,7 @@ export default function CodeBox({ selected, language, title, codeString }) {
     const handleChange = (e) => {
         setCode(e.target.value);
     }
-    useEffect(() =>{
+    useEffect(() => {
         var lines = code.split("\n");
         lines.sort(function (a, b) {
             return b.length - a.length;
@@ -18,7 +18,7 @@ export default function CodeBox({ selected, language, title, codeString }) {
         console.log(lines);
         setWidth(lines[0].length > 10 ? lines[0].length : 20);
         setHeight(lines.length > 5 ? lines.length : 5);
-    },[code])
+    }, [code])
     useEffect(() => {
         console.log(SyntaxHighlighter.supportedLanguages);
         setTitleText(title);
@@ -43,11 +43,14 @@ export default function CodeBox({ selected, language, title, codeString }) {
                 </div>
             </div>
             <div className='content'>
-                <textarea spellCheck="false" onChange={handleChange} style={{ width: `${width}ch`, overflow: 'hidden'}} rows={height}></textarea>
+                <textarea spellCheck="false" onChange={handleChange} style={{ width: `${width}ch`, overflow: 'hidden' }} rows={height}></textarea>
                 <SyntaxHighlighter language={language} style={Styles[selected]}>
                     {code}
                 </SyntaxHighlighter>
+
+                <label className='watermark'>beautiful-code.vercel.app</label>
             </div>
+
         </div>
     )
 }

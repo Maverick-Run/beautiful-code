@@ -1,55 +1,70 @@
 body {
-	background: linear-gradient(140deg, #000000, #202020, #131313, #000000);
-	background-size: 400% 400%;
-	animation: gradient 20s ease infinite;
-	height: 100vh;
+    background: linear-gradient(140deg, #000000, #202020, #131313, #000000);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    height: 100vh;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.app{
+.watermark {
+    float:right;
+    color: rgba(255, 255, 255, 0.329);
+    font-Size: 0.7rem;
+    margin-top: -30px;
+    padding: 1%;
+}
+
+.app {
     width: 100%;
     height: 100%;
-} 
+}
 
-.centeredBox{
+.centeredBox {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     padding: 1%;
 }
-.centeredBox.code{
+
+.centeredBox.code {
     min-height: 90vh;
 }
-.centeredBox.sett{
+
+.centeredBox.sett {
     min-height: 10vh;
 }
-.codeBox{
-    border:1px solid rgba(255, 255, 255, 0.356);
+
+.codeBox {
+    border: 1px solid rgba(255, 255, 255, 0.356);
     min-width: 100px;
     min-height: 100px;
-    border-radius:10px 10px 2px 2px;
+    border-radius: 10px 10px 2px 2px;
     background: linear-gradient(140deg, #1b1b1b73, #16161686);
 }
-pre{
+
+pre {
     background-color: transparent !important;
     overflow: hidden !important;
 }
-input label{
+
+input label {
     background-color: transparent;
     border: none;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
@@ -59,40 +74,45 @@ input label{
     text-align: center;
     color: rgba(255, 255, 255, 0.397);
 }
+
 .input-container {
     position: relative;
     align-items: center;
     text-align: center;
-  }
-  
-  .transparent-input {
+}
+
+.transparent-input {
     background-color: transparent;
     border: none;
     font-size: 1rem;
     padding: 0px;
     color: #33333300;
-  }
-  
-  .input-label {
+}
+
+.input-label {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 5px;
     left: 0;
-    pointer-events: none; /* Allow interaction with input box */
-    transition: all 0.3s ease; /* Add smooth transition effect */
-  }
-.handle{
-    width:100%;
+    pointer-events: none;
+    /* Allow interaction with input box */
+    transition: all 0.3s ease;
+    /* Add smooth transition effect */
+}
+
+.handle {
+    width: 100%;
     justify-content: space-around;
     display: flex;
     height: 17px;
     padding: 2px;
     position: relative;
 }
-.title{
-    width:100%;
-    font-family: Inter,sans-serif;
+
+.title {
+    width: 100%;
+    font-family: Inter, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
@@ -101,28 +121,35 @@ input label{
     line-height: 1rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.397);
-    position:absolute;
+    position: absolute;
 }
-.content{
-    height:auto;
+
+.content {
+    height: auto;
     padding: 1%;
     position: relative;
 }
+
 ::selection {
     background-color: transparent;
     color: inherit;
-  }
-  input::selection, textarea::selection, select::selection, option::selection {
+}
+
+input::selection,
+textarea::selection,
+select::selection,
+option::selection {
     background-color: transparent;
     color: inherit;
-  }
-textarea{
-    width:100%;
-    height:100%;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: none;
     color: rgba(255, 255, 255, 0);
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     inset: 0;
@@ -130,19 +157,23 @@ textarea{
     line-height: 1rem;
     resize: none;
     position: absolute;
-    overflow: hidden;    
+    overflow: hidden;
     z-index: 0;
 }
-textarea:focus, input:focus{
+
+textarea:focus,
+input:focus {
     outline: none;
 }
-.buttons{
-    display:flex;
-    width:100%;
+
+.buttons {
+    display: flex;
+    width: 100%;
     justify-content: flex-end;
     float: right;
 }
-.btn{
+
+.btn {
     height: 13px;
     width: 13px;
     margin: 2px;
@@ -150,21 +181,24 @@ textarea:focus, input:focus{
     display: inline-block;
     transition-duration: 500ms;
 }
-.close{
+
+.close {
     background-color: #630000;
 }
-.max{
+
+.max {
     background-color: #119600;
 }
-.min{
+
+.min {
     background-color: #b88700;
 }
-.btn:hover{
+
+.btn:hover {
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.466);
     border: 1px solid rgba(224, 255, 255, 0.164);
 }
 
-.left{
-    width:30%;
+.left {
+    width: 30%;
 }
-
