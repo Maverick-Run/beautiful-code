@@ -16,7 +16,7 @@ export default function CodeBox({ selected, language, title, codeString }) {
             return b.length - a.length;
         });
         console.log(lines);
-        setWidth(lines[0].length > 10 ? lines[0].length : 20);
+        setWidth(lines[0].length > 10 ? lines[0].length+2 : 20);
         setHeight(lines.length > 5 ? lines.length : 5);
     }, [code])
     useEffect(() => {
@@ -24,6 +24,9 @@ export default function CodeBox({ selected, language, title, codeString }) {
         setTitleText(title);
         console.log(titleText);
     }, [])
+    useEffect(() =>{
+        history.pushState({}, null, `?style=${selected}&language=${language}&title=${titleText}&code=${code}`);
+    },[code, titleText, selected, language])
 
     return (
         <div className='codeBox' style={{ width: `${width}ch` }}>
