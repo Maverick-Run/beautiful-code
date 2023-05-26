@@ -17,6 +17,9 @@ export default function Settings({ selected, setSelected, handleCapture, languag
       <label htmlFor="colourscheme" className='inputlabel'>Style</label>
         <div className="select-button" onClick={() => {
           document.querySelector('.colourscheme').classList.toggle('visible');
+          if (document.querySelector('.language').classList.contains('visible')){
+            document.querySelector('.language').classList.toggle('visible');
+          };
         }}>{selectedOption}</div>
         <ul className="options-list colourscheme" onClick={(e) => {
           console.log(e);
@@ -126,6 +129,10 @@ export default function Settings({ selected, setSelected, handleCapture, languag
         <label htmlFor="language" className='inputlabel'>Language</label>
         <div className="select-button" onClick={() => {
           document.querySelector('.language').classList.toggle('visible');
+          document.querySelector('.colourscheme').classList.toggle('visible');
+          if (document.querySelector('.colourscheme').classList.contains('visible')){
+            document.querySelector('.colourscheme').classList.toggle('visible');
+          };
         }}>{selectedLanguage}</div>
         <ul className="options-list language" onClick={(e) => {
           console.log(e);
